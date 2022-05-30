@@ -1270,6 +1270,31 @@
       }
     },
     {
+      "id": "housenumber",
+      "type": "symbol",
+      "source": "openmaptiles",
+      "source-layer": "housenumber",
+      "minzoom": 17,
+      "filter": [
+        "==",
+        "$type",
+        "Point"
+      ],
+      "layout": {
+        "text-field": [
+          "get",
+          "housenumber"
+        ],
+        "text-font": [
+          "Noto Sans Regular"
+        ],
+        "text-size": 10
+      },
+      "paint": {
+        "text-color": "rgba(160, 160, 160, 1)"
+      }
+    },
+    {
       "id": "tunnel-service-track-casing",
       "type": "line",
       "metadata": {
@@ -8097,46 +8122,59 @@
       },
       "paint": {
         "text-color": [
-          "match",
+          "let",
+          "style",
           [
             "get",
             "style"
           ],
-          "•",
-          "#666",
+          "superclass",
+          [
+            "get",
+            "superclass"
+          ],
           [
             "match",
             [
-              "get",
-              "superclass"
+              "var",
+              "style"
             ],
-            "products",
-            "#F25C05",
-            "convenience",
-            "#00a0a4",
-            "services",
-            "#2a62ac",
-            "safety",
-            "#e42224",
-            "mobility",
-            "#3b74b9",
-            "amenity",
-            "#2a62ac",
-            "remarkable",
-            "#e50980",
-            "culture",
-            "#76009e",
-            "hosting",
-            "#99163a",
-            "catering",
-            "#f09007",
-            "leisure",
-            "#00A757",
-            "public_landmark",
-            "#1D1D1B",
-            "shopping",
-            "#808080",
-            "#666"
+            "•",
+            "#666",
+            [
+              "match",
+              [
+                "var",
+                "superclass"
+              ],
+              "amenity",
+              "#2a62ac",
+              "catering",
+              "#f09007",
+              "culture",
+              "#76009e",
+              "hosting",
+              "#99163a",
+              "leisure",
+              "#00a757",
+              "local_shop",
+              "#00a0c4",
+              "mobility",
+              "#3b74b9",
+              "products",
+              "#f25c05",
+              "public_landmark",
+              "#1d1d1b",
+              "remarkable",
+              "#e50980",
+              "safety",
+              "#e42224",
+              "services",
+              "#2a62ac",
+              "shopping",
+              "#808080",
+              "#666"
+            ]
           ]
         ],
         "text-halo-blur": 0.5,
@@ -8308,46 +8346,59 @@
       },
       "paint": {
         "text-color": [
-          "match",
+          "let",
+          "style",
           [
             "get",
             "style"
           ],
-          "•",
-          "#666",
+          "superclass",
+          [
+            "get",
+            "superclass"
+          ],
           [
             "match",
             [
-              "get",
-              "superclass"
+              "var",
+              "style"
             ],
-            "products",
-            "#F25C05",
-            "convenience",
-            "#00a0a4",
-            "services",
-            "#2a62ac",
-            "safety",
-            "#e42224",
-            "mobility",
-            "#3b74b9",
-            "amenity",
-            "#2a62ac",
-            "remarkable",
-            "#e50980",
-            "culture",
-            "#76009e",
-            "hosting",
-            "#99163a",
-            "catering",
-            "#f09007",
-            "leisure",
-            "#00A757",
-            "public_landmark",
-            "#1D1D1B",
-            "shopping",
-            "#808080",
-            "#666"
+            "•",
+            "#666",
+            [
+              "match",
+              [
+                "var",
+                "superclass"
+              ],
+              "amenity",
+              "#2a62ac",
+              "catering",
+              "#f09007",
+              "culture",
+              "#76009e",
+              "hosting",
+              "#99163a",
+              "leisure",
+              "#00a757",
+              "local_shop",
+              "#00a0c4",
+              "mobility",
+              "#3b74b9",
+              "products",
+              "#f25c05",
+              "public_landmark",
+              "#1d1d1b",
+              "remarkable",
+              "#e50980",
+              "safety",
+              "#e42224",
+              "services",
+              "#2a62ac",
+              "shopping",
+              "#808080",
+              "#666"
+            ]
           ]
         ],
         "text-halo-blur": 0.5,
@@ -8511,46 +8562,59 @@
       },
       "paint": {
         "text-color": [
-          "match",
+          "let",
+          "style",
           [
             "get",
             "style"
           ],
-          "•",
-          "#666",
+          "superclass",
+          [
+            "get",
+            "superclass"
+          ],
           [
             "match",
             [
-              "get",
-              "superclass"
+              "var",
+              "style"
             ],
-            "products",
-            "#F25C05",
-            "convenience",
-            "#00a0a4",
-            "services",
-            "#2a62ac",
-            "safety",
-            "#e42224",
-            "mobility",
-            "#3b74b9",
-            "amenity",
-            "#2a62ac",
-            "remarkable",
-            "#e50980",
-            "culture",
-            "#76009e",
-            "hosting",
-            "#99163a",
-            "catering",
-            "#f09007",
-            "leisure",
-            "#00A757",
-            "public_landmark",
-            "#1D1D1B",
-            "shopping",
-            "#808080",
-            "#666"
+            "•",
+            "#666",
+            [
+              "match",
+              [
+                "var",
+                "superclass"
+              ],
+              "amenity",
+              "#2a62ac",
+              "catering",
+              "#f09007",
+              "culture",
+              "#76009e",
+              "hosting",
+              "#99163a",
+              "leisure",
+              "#00a757",
+              "local_shop",
+              "#00a0c4",
+              "mobility",
+              "#3b74b9",
+              "products",
+              "#f25c05",
+              "public_landmark",
+              "#1d1d1b",
+              "remarkable",
+              "#e50980",
+              "safety",
+              "#e42224",
+              "services",
+              "#2a62ac",
+              "shopping",
+              "#808080",
+              "#666"
+            ]
           ]
         ],
         "text-halo-blur": 0.5,
